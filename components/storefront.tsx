@@ -21,7 +21,7 @@ const products: Product[] = [
 ]
 const money = (n: number) => new Intl.NumberFormat('ar-SA').format(n) + ' ر.س'
 
-function Brand() { return <Link className="brand" href="/" aria-label="My Home الرئيسية"><span className="brand-mark"><Sofa size={22}/></span><span>My Home<small>بيتك.. حكايتك</small></span></Link> }
+function Brand() { return <Link className="brand" href="/" aria-label="My Home الرئيسية"><span className="brand-mark"><Sofa size={22}/></span><span><span className="brand-dot">.</span><span className="brand-my">My</span>{' '}<span className="brand-home">Home</span><small>بيتك.. حكايتك</small></span></Link> }
 
 export default function Storefront({ page }: { page: 'home' | 'shop' | 'about' | 'contact' }) {
   const pathname = usePathname()
